@@ -339,6 +339,7 @@ Transform:
   - {fileID: 1942624544}
   - {fileID: 535494391}
   - {fileID: 368857692}
+  - {fileID: 898222643}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &82238906
@@ -717,6 +718,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8616610776480918334, guid: 0a3e863f52c5f7b429c2af1121502d82, type: 3}
       propertyPath: m_Name
+      value: Spike
+      objectReference: {fileID: 0}
+    - target: {fileID: 8616610776480918334, guid: 0a3e863f52c5f7b429c2af1121502d82, type: 3}
+      propertyPath: m_TagString
       value: Spike
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -2725,6 +2730,67 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 297398903937799014, guid: 4a2a463de36c32f498a7000951533dca, type: 3}
   m_PrefabInstance: {fileID: 2087317227}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &599867690
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 50561438}
+    m_Modifications:
+    - target: {fileID: 1688440353688464006, guid: 0a3e863f52c5f7b429c2af1121502d82, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.99
+      objectReference: {fileID: 0}
+    - target: {fileID: 1688440353688464006, guid: 0a3e863f52c5f7b429c2af1121502d82, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1688440353688464006, guid: 0a3e863f52c5f7b429c2af1121502d82, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.7900001
+      objectReference: {fileID: 0}
+    - target: {fileID: 1688440353688464006, guid: 0a3e863f52c5f7b429c2af1121502d82, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1688440353688464006, guid: 0a3e863f52c5f7b429c2af1121502d82, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1688440353688464006, guid: 0a3e863f52c5f7b429c2af1121502d82, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1688440353688464006, guid: 0a3e863f52c5f7b429c2af1121502d82, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1688440353688464006, guid: 0a3e863f52c5f7b429c2af1121502d82, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1688440353688464006, guid: 0a3e863f52c5f7b429c2af1121502d82, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1688440353688464006, guid: 0a3e863f52c5f7b429c2af1121502d82, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1688440353688464006, guid: 0a3e863f52c5f7b429c2af1121502d82, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8616610776480918334, guid: 0a3e863f52c5f7b429c2af1121502d82, type: 3}
+      propertyPath: m_Name
+      value: Spike
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 0a3e863f52c5f7b429c2af1121502d82, type: 3}
 --- !u!1001 &602346550
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3641,6 +3707,11 @@ Transform:
 Transform:
   m_CorrespondingSourceObject: {fileID: 297398903937799014, guid: 4a2a463de36c32f498a7000951533dca, type: 3}
   m_PrefabInstance: {fileID: 1733456832}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &898222643 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1688440353688464006, guid: 0a3e863f52c5f7b429c2af1121502d82, type: 3}
+  m_PrefabInstance: {fileID: 599867690}
   m_PrefabAsset: {fileID: 0}
 --- !u!4 &912056151 stripped
 Transform:
@@ -7732,8 +7803,8 @@ CircleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0.46, y: 0}
-  m_Radius: 0.39
+  m_Offset: {x: 0.38863525, y: 0}
+  m_Radius: 0.31863526
 --- !u!4 &1996828900 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 297398903937799014, guid: 4a2a463de36c32f498a7000951533dca, type: 3}
