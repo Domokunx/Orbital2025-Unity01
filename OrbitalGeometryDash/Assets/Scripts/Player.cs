@@ -1,6 +1,6 @@
 using UnityEngine;
 
-[RequireComponent(typeof(Rigidbody2D), typeof(SpriteRenderer), typeof(Animator))]
+[RequireComponent(typeof(Rigidbody2D), typeof(Animator))]
 public class GeometryDashPlayer : MonoBehaviour
 {
     [Header("Movement Settings")]
@@ -21,6 +21,7 @@ public class GeometryDashPlayer : MonoBehaviour
     public AudioSource deathSound;
     public Transform playerArt;
 
+    public Animator animator;
     private Rigidbody2D rb;
     private Animator anim;
     private int jumpsRemaining;
@@ -37,7 +38,7 @@ public class GeometryDashPlayer : MonoBehaviour
     {
 
         if (isDead) return;
-
+        
         transform.position += movementSpeed * Vector3.right * Time.deltaTime;
         if (Input.GetButtonDown("Jump") && (IsGrounded() || jumpsRemaining > 0))
         {
@@ -56,6 +57,7 @@ public class GeometryDashPlayer : MonoBehaviour
     }
     private void Jump()
     {
+        animator.SetTrigger("New Trigger");
         rb.linearVelocity = new Vector2(rb.linearVelocity.x, 0f);
         rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
         jumpsRemaining--;
@@ -83,6 +85,7 @@ public class GeometryDashPlayer : MonoBehaviour
         if (collision.transform.CompareTag("Spike"))
         {
             Die();
+            Debug.Log("Spike Hit");
         }
     }
 
@@ -90,6 +93,7 @@ public class GeometryDashPlayer : MonoBehaviour
     {
         if (isDead) return;
         Die();
+        Debug.Log("Collider Hit");
     }
 
     void ClampRotation()
@@ -123,5 +127,17 @@ public class GeometryDashPlayer : MonoBehaviour
             Gizmos.color = Color.red;
             Gizmos.DrawWireSphere(groundCheck.position, groundCheckRadius);
         }
+    }
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(transform.position, 1f);
+
+        Gizmos.color = Color.green;
+        Gizmos.DrawCube(transform.position + Vector3.up * 2, Vector3.one);
+
+        Gizmos.color = Color.blue;
+        Gizmos.DrawLine(transform.position, transform.position + transform.forward * 3);
     }
 }
